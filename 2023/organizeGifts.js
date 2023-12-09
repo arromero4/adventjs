@@ -1,6 +1,6 @@
 // Dia 8
 // Reto #8: 🏬 Ordenando el almacén
-//Challenge #8: 🏬 Sorting the warehouse
+//Challenge #8: Sorting the warehouse
 
 // Los elfos están muy ocupados en el taller de Santa Claus organizando regalos 🎁 para la víspera de Navidad 🎄.
 
