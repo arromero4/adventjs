@@ -1,4 +1,5 @@
 // Day 2
+//Challenge #2: We start the factory
 // In Santa's workshop, the elves have a gift list they wish to make and a limited set of materials.
 
 // Gifts are strings of text and materials are characters. Your task is to write a function that, given a list of gifts and the available materials, returns a list of the gifts that can be made.
