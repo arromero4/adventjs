@@ -1,4 +1,5 @@
-// Reto #9: 🚦 Alterna las luces
+// Reto #9: Alterna las luces
+//Challenge #9: Switch the lights
 
 // Están encendiendo las luces de Navidad 🎄 en la ciudad y, como cada año, ¡hay que arreglarlas!
 
