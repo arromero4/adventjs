@@ -7,52 +7,34 @@
 
 // Nos han pedido que escribamos una función adjustLights que, dado un array de strings con el color de cada luz (representados con los emojis 🔴 para el rojo y 🟢 para el verde), devuelva el número mínimo de luces que hay que cambiar para que estén los colores alternos.
 
-// adjustLights(['🟢', '🔴', '🟢', '🟢', '🟢'])
-// // -> 1 (cambias la cuarta luz a 🔴)
 
-// adjustLights(['🔴', '🔴', '🟢', '🟢', '🔴'])
-// // -> 2 (cambias la segunda luz a 🟢 y la tercera a 🔴)
-
-// adjustLights(['🟢', '🔴', '🟢', '🔴', '🟢'])
-// // -> 0 (ya están alternadas)
-
-// adjustLights(['🔴', '🔴', '🔴'])
-// // -> 1 (cambias la segunda luz a 🟢)
 
 
 function adjustLights(lights) {
-  let redLight = 0;
-  let greenLight = 0;
-  let pair = 0;
+  let changes = 0;
+  let initialColor = lights[0];
 
-  lights.forEach((light, index) => {
-    pair = (index % 2) === 0;
-    if(pair && light != '🔴'){
-      redLight++;
-    }
-    if(!pair && light != '🟢'){
-      redLight++;
-    }
-    if(pair && light != '🟢'){
-      greenLight++;
-    }
-    if(!pair && light != '🔴'){
-      greenLight++;
-    }
-    console.log(greenLight, redLight)
-  })
-  
-  //return Math.min(redLight, greenLight)
+  for (let i = 0; i < lights.length; i++) {
+    if (lights[i] !== initialColor) changes++;
+    // Alternar el color inicial para la próxima luz
+    initialColor = initialColor === '🔴' ? '🟢' : '🔴';
+  }
+  // Calcular el mínimo entre changes y su complemento
+  changes = changes < lights.length - changes
+    ? changes
+    : lights.length - changes;
+  return changes;
+
+
 }
 
-console.log(adjustLights(['🟢', '🔴', '🟢', '🟢', '🟢']))
+adjustLights(['🟢', '🔴', '🟢', '🟢', '🟢'])
 // -> 1 (cambias la cuarta luz a 🔴)
 
-// console.log(adjustLights(['🔴', '🔴', '🟢', '🟢', '🔴']))
-// -> 2 (cambias la segunda luz a 🟢 y la tercera a 🔴)
-
-// console.log(adjustLights(['🟢', '🔴', '🟢', '🔴', '🟢']))
+adjustLights(['🔴', '🔴', '🟢', '🟢', '🔴'])
+  // -> 2 (cambias la segunda luz a 🟢 y la tercera a 🔴)
+  / adjustLights(['🟢', '🔴', '🟢', '🔴', '🟢'])
 // -> 0 (ya están alternadas)
 
-// console.log(adjustLights(['🔴', '🔴', '🔴']))
+adjustLights(['🔴', '🔴', '🔴'])
 // -> 1 (cambias la segunda luz a 🟢)
