@@ -19,3 +19,49 @@
 // getIndexsForPalindrome('aaababa') // [1, 3]
 // getIndexsForPalindrome('caababa') // null
 // Si se puede formar el palíndromo con diferentes intercambios, siempre se debe devolver el primero que se encuentre.
+
+
+function getIndexsForPalindrome(word) {
+    // Función para verificar si una cadena es un palíndromo
+    function isPalindrome(str) {
+        let left = 0;
+        let right = str.length - 1;
+        while (left < right) {
+            if (str[left] !== str[right]) {
+                return null;
+            }
+            left++;
+            right--;
+        }
+        return [];
+    }
+
+    // // Si la palabra ya es un palíndromo, devolver un array vacío
+    if (isPalindrome(word)) {
+        return [];
+    }
+
+    // Intentar encontrar los índices para un intercambio
+    for (let i = 0; i < word.length; i++) {
+        for (let j = i + 1; j < word.length; j++) {
+            // Intentar intercambiar las letras en los índices i y j
+            let swappedWord = word.split('');
+            [swappedWord[i], swappedWord[j]] = [swappedWord[j], swappedWord[i]];
+            swappedWord = swappedWord.join('');
+
+            // Verificar si el resultado es un palíndromo
+            if (isPalindrome(swappedWord)) {
+                // Devolver los índices como un array
+                return [i, j];
+            }
+        }
+    }
+
+    // Si no es posible formar un palíndromo con un intercambio, devolver null
+    return null;
+  }
+
+console.log(getIndexsForPalindrome('anna')) // []
+console.log(getIndexsForPalindrome('abab')) // [0, 1]
+console.log(getIndexsForPalindrome('abac')) // null
+
