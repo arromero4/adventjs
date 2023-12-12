@@ -34,12 +34,12 @@ function createChristmasTree(ornaments, height) {
   for (let i = 1; i <= height; i++) {
     christmasTree += " ".repeat(height - i);
 
-
+    console.log('first i: ', i)
     for (let j = 1; j <= i * (2 - 1); j++) {
-      console.log('orIdx',ornamentsIndex)
+      console.log('orIdx start:',ornamentsIndex)
       christmasTree += ornaments.charAt(ornamentsIndex)
       ornamentsIndex = (ornamentsIndex + 1) % ornaments.length;
-      
+      console.log('orIdx after:',ornamentsIndex)
       console.log('j,i',j,i)
       if(j < i * (2 - 1)) christmasTree += " "
 
