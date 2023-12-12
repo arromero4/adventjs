@@ -27,19 +27,15 @@ function getIndexsForPalindrome(word) {
         let left = 0;
         let right = str.length - 1;
         while (left < right) {
-            if (str[left] !== str[right]) {
-                return null;
-            }
+            if (str[left] !== str[right]) return false;
             left++;
             right--;
         }
-        return [];
+        return true;
     }
 
     // // Si la palabra ya es un palíndromo, devolver un array vacío
-    if (isPalindrome(word)) {
-        return [];
-    }
+    if (isPalindrome(word)) return [];
 
     // Intentar encontrar los índices para un intercambio
     for (let i = 0; i < word.length; i++) {
