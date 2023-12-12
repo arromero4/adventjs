@@ -46,10 +46,7 @@ function getIndexsForPalindrome(word) {
             swappedWord = swappedWord.join('');
 
             // Verificar si el resultado es un palíndromo
-            if (isPalindrome(swappedWord)) {
-                // Devolver los índices como un array
-                return [i, j];
-            }
+            if (isPalindrome(swappedWord)) return [i, j];// Devolver los índices como un array
         }
     }
 
