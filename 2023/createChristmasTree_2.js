@@ -29,26 +29,22 @@
 
 function createChristmasTree(ornaments, height) {
   let ornamentsIndex = 0;
-  let christmasTree = "";
-  
+  let ornamentsByLevel = 1;
+  let linea = "";
+
   for (let i = 1; i <= height; i++) {
-    christmasTree += " ".repeat(height - i);
-
-
-    for (let j = 1; j <= i * (2 - 1); j++) {
-      console.log('orIdx',ornamentsIndex)
-      christmasTree += ornaments.charAt(ornamentsIndex)
-      ornamentsIndex = (ornamentsIndex + 1) % ornaments.length;
-      
-      console.log('j,i',j,i)
-      if(j < i * (2 - 1)) christmasTree += " "
-
-      console.log(christmasTree)
+    linea += " ".repeat(height - i);
+    for (let j = 1; j <= ornamentsByLevel; j++) {
+      linea += `${ornaments.charAt(ornamentsIndex)}`
+      if(j != ornamentsByLevel) linea += " "
+      ornamentsIndex++;
+      if(ornamentsIndex == ornaments.length) ornamentsIndex = 0;
+      console.log(linea)
     }
-    console.log('---------------') 
-    christmasTree += '\n'
+    linea += '\n'
+    ornamentsByLevel++;
   }
-  return christmasTree  += " ".repeat(height - 1) + "|\n"
+  return linea  += " ".repeat(height - 1) + "|\n"
 }
 
 // Example usage:
