@@ -7,7 +7,17 @@
 
 // Nos han pedido que escribamos una función adjustLights que, dado un array de strings con el color de cada luz (representados con los emojis 🔴 para el rojo y 🟢 para el verde), devuelva el número mínimo de luces que hay que cambiar para que estén los colores alternos.
 
+// adjustLights(['🟢', '🔴', '🟢', '🟢', '🟢'])
+// // -> 1 (cambias la cuarta luz a 🔴)
 
+// adjustLights(['🔴', '🔴', '🟢', '🟢', '🔴'])
+// // -> 2 (cambias la segunda luz a 🟢 y la tercera a 🔴)
+
+// adjustLights(['🟢', '🔴', '🟢', '🔴', '🟢'])
+// // -> 0 (ya están alternadas)
+
+// adjustLights(['🔴', '🔴', '🔴'])
+// // -> 1 (cambias la segunda luz a 🟢)
 
 
 function adjustLights(lights) {
@@ -15,6 +25,7 @@ function adjustLights(lights) {
   let initialColor = lights[0];
 
   for (let i = 0; i < lights.length; i++) {
+    console.log(i,lights[i],initialColor);
     if (lights[i] !== initialColor) changes++;
     // Alternar el color inicial para la próxima luz
     initialColor = initialColor === '🔴' ? '🟢' : '🔴';
@@ -28,13 +39,14 @@ function adjustLights(lights) {
 
 }
 
-adjustLights(['🟢', '🔴', '🟢', '🟢', '🟢'])
+//adjustLights(['🟢', '🔴', '🟢', '🟢', '🟢'])
 // -> 1 (cambias la cuarta luz a 🔴)
 
 adjustLights(['🔴', '🔴', '🟢', '🟢', '🔴'])
-  // -> 2 (cambias la segunda luz a 🟢 y la tercera a 🔴)
-  / adjustLights(['🟢', '🔴', '🟢', '🔴', '🟢'])
+// -> 2 (cambias la segunda luz a 🟢 y la tercera a 🔴)
+
+// adjustLights(['🟢', '🔴', '🟢', '🔴', '🟢'])
 // -> 0 (ya están alternadas)
 
-adjustLights(['🔴', '🔴', '🔴'])
+//adjustLights(['🔴', '🔴', '🔴'])
 // -> 1 (cambias la segunda luz a 🟢)
