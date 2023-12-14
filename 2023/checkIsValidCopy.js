@@ -38,22 +38,20 @@
 // Basado en el desafío de CodeWars Photocopy decay
 
 function checkIsValidCopy(original, copy) {
-    let originalCopy = original.toLowerCase().split(' ');
-    let copyCopy = copy.toLowerCase().split(' ');
 
-    console.log(originalCopy, copyCopy);
-    // Expresión regular que busca los símbolos #, +, :, .
-var regex = /[#\+:.\s]/g;
-// Utilizar el método match para encontrar coincidencias
-var matches = copy.match(regex);
+  for (let index = 0; index < original.length; index++) {
+    let char = original[index].match(/\w/g);
 
-// Verificar si se encontraron coincidencias
-if (matches) {
-    console.log("Se encontraron las siguientes coincidencias:", matches);
-} else {
-    console.log("No se encontraron coincidencias.");
-}
+    let valid = `${char ? `${char}${char[0].toLowerCase()}`: ''}#\+:. `;
+    if(valid.indexOf(copy[index]) < valid.indexOf(original[index])) {
+      return false;
+    }
+    
   }
+  return true
+
+
+}
 
 // checkIsValidCopy(
 //   'Santa Claus is coming',
@@ -63,5 +61,5 @@ if (matches) {
 //   'Santa Claus is coming',
 //   'p#nt: cla#s #s c+min#'
 // ) // false (por la p inicial)
-checkIsValidCopy('Santa Claus', 's#+:. c:. s') // true
-checkIsValidCopy('Santa Claus', 's#+:.#c:. s') // false (hay un # donde no debería)
+console.log(checkIsValidCopy('Santa Claus', 's#+:. c:. s') )// true
+console.log(checkIsValidCopy('Santa Claus', 's#+:.#c:. s')) // false (hay un # donde no debería)
