@@ -1,5 +1,5 @@
 // Reto #19: 💣 Enfrenta el sabotaje
-//      
+// Challenge #19: Face the sabotage
 // ¡Alerta en la fábrica de juguetes de Santa! El Grinch 😈 se ha infiltrado en el almacén y ha saboteado algunos de los juguetes 💣.
 
 // Los elfos necesitan ayuda para encontrar los juguetes saboteados y eliminarlos antes de que llegue la Navidad. Para ello tenemos el mapa 🗺️ del almacén, que es una matriz.
