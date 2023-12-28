@@ -1,5 +1,5 @@
 // Reto #21: 🪐 Mensaje binario
-//Challenge #21: 🪐 Binary message
+//Challenge #21: Binary message
 // Los elfos están recibiendo mensajes binarios extraños desde Marte 🪐. ¿Los extraterrestres están tratando de comunicarse con ellos? 👽
 
 // El mensaje que llega es un array de 0s y 1s. Parece que han encontrado un patrón… Para asegurarse, quieren encontrar el segmento más largo de la cadena donde el número de 0s y 1s sea igual.
