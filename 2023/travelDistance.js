@@ -1,5 +1,5 @@
 // Reto #25: 🗺️ Calculando distancias
-//Challenge #25: 🗺️ Calculating distances
+//Challenge #25: Calculating distances
 // Ya ha entregado Santa Claus 🎅 todos los regalos a los niños pero quieren revisar si pueden mejorar de cara al año que viene.
 
 // Los elfos quieren saber cuántos movimientos ha hecho Santa Claus 🛷 para entregar todos los regalos. Para ello, te dan un mapa de la ciudad con la ubicación de cada niño y de Santa.
