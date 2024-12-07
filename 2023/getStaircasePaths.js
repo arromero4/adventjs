@@ -1,5 +1,5 @@
 // Reto #24: 🪜 Brincos en la escalera
-//Challenge #24: 🪜 Jump on the stairs
+//Challenge #24: Jump on the stairs
 // En la aldea de Santa, hay una escalera mágica que lleva a la fábrica de juguetes 🧸. Los elfos, siempre buscando hacer ejercicio y divertirse 🏃‍♂️, deciden saltar los peldaños de la escalera.
 
 // Nos dan steps como el número de peldaños de la escalera y el número máximo de peldaños maxJump que un elfo puede saltar en un solo salto.
