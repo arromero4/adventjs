@@ -1,3 +1,6 @@
+//Reto #12: 💵 ¿Cuánto cuesta el árbol?
+
+
 // Estás en un mercado muy especial en el que se venden árboles de Navidad 🎄. Cada uno viene decorado con una serie de adornos muy peculiares, y el precio del árbol se determina en función de los adornos que tiene.
 
 // *: Copo de nieve - Valor: 1
