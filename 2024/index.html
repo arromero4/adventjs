@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rack 45 RU</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f8f9fa;
+      min-height: 100vh;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Contenedor principal */
+    .rack {
+      display: grid;
+      grid-template-columns: 30px 200px 30px; /* Izquierda | Centro | Derecha */
+      grid-template-rows: repeat(45, 20px); /* 45 filas iguales para 45 RU */
+      border: 2px solid #333;
+      background-color: white;
+    }
+
+    /* RU numeradas (izquierda y derecha) */
+    .ru-number {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 12px;
+      color: #333;
+      border-bottom: 1px solid #ddd;
+    }
+
+    /* RU vacías */
+    .ru {
+      border-bottom: 1px solid #ddd;
+    }
+
+    /* Componentes específicos */
+    .component {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      font-size: 12px;
+      color: white;
+      border: 1px solid #333;
+      grid-column: 2 / 3; /* Solo afecta la columna central */
+    }
+
+    /* Estilos de los componentes */
+    .panel-bnc { background-color: #d6b26f; }
+    .panel-krone { background-color: #ff6666; }
+    .panel-pouyet { background-color: #b3a2c7; }
+    .switch { background-color: #4aacc5; }
+    .organizador { background-color: #000; }
+    .ac { background-color: #92d050; }
+
+  </style>
+</head>
+<body>
+  <div class="rack">
+    <!-- Numeración RU en la izquierda -->
+    <!-- RU 45 - 1 -->
+    <!-- Izquierda | Componente central | Derecha -->
+
+    <!-- Panel BNC 1 -->
+    <div class="ru-number">45</div>
+    <div class="component panel-bnc">PANEL BNC</div>
+    <div class="ru-number">45</div>
+
+    <!-- Panel BNC 2 -->
+    <div class="ru-number">44</div>
+    <div class="component panel-bnc">PANEL BNC</div>
+    <div class="ru-number">44</div>
+
+    <!-- Panel KRONE -->
+    <div class="ru-number">43</div>
+    <div class="component panel-krone">PANEL KRONE</div>
+    <div class="ru-number">43</div>
+
+    <!-- Panel POUYET -->
+    <div class="ru-number">42</div>
+    <div class="component panel-pouyet">PANEL POUYET</div>
+    <div class="ru-number">42</div>
+
+    <!-- RU vacía -->
+    <div class="ru-number">41</div>
+    <div class="ru"></div>
+    <div class="ru-number">41</div>
+
+    <!-- SW1 -->
+    <div class="ru-number">39</div>
+    <div class="component switch">SW-1 2950</div>
+    <div class="ru-number">39</div>
+
+    <div class="ru-number">38</div>
+    <div class="component organizador">ORGANIZADOR</div>
+    <div class="ru-number">38</div>
+
+    <!-- Espacios vacíos intermedios -->
+    <div class="ru-number">31</div>
+    <div class="component ac">AC_1 MOD 3700</div>
+    <div class="ru-number">31</div>
+
+    <!-- Celdas de RU vacías -->
+    <!-- Se repite el patrón hasta RU = 1 -->
+    <div class="ru-number">1</div>
+    <div class="ru"></div>
+    <div class="ru-number">1</div>
+  </div>
+</body>
+</html>
